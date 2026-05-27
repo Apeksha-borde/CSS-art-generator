@@ -1,0 +1,39 @@
+ *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+   :root {
+    --bg: #0a0a0f;
+    --surface: #13131a;
+    --surface2: #1c1c26;
+    --border: rgba(255,255,255,0.08);
+    --border-hi: rgba(255,255,255,0.18);
+    --text: #e8e8f0;
+    --text-muted: #7070a0;
+    --text-dim: #404060;
+    --accent: #a78bfa;
+    --accent2: #34d399;
+    --accent3: #fb923c;
+    --font-display: 'Syne', sans-serif;
+    --font-mono: 'DM Mono', monospace;
+  }
+
+html, body { height: 100%; background: var(--bg); color: var(--text); font-family: var(--font-mono); }
+
+ body {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: 56px 1fr;
+    min-height: 100vh;
+  }
+
+header {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0 28px;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
