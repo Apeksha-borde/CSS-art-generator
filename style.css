@@ -105,3 +105,46 @@ header {
     color: #0a0a0f;
     font-weight: 500;
   }
+
+    .color-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+  }
+
+
+  .color-item label {
+    display: block;
+    font-size: 10px;
+    color: var(--text-dim);
+    margin-bottom: 5px;
+    letter-spacing: 0.06em;
+  }
+
+  .color-swatch {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 5px 8px;
+    cursor: pointer;
+    transition: border-color 0.15s;
+  } 
+
+  .color-swatch:hover { border-color: var(--border-hi); }
+
+  .color-swatch input[type="color"] {
+    width: 22px; height: 22px;
+    border: none; background: none;
+    padding: 0; cursor: pointer;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .color-hex {
+    font-size: 10px;
+    color: var(--text-muted);
+    letter-spacing: 0.04em;
+  }
